@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto - Mi Empresa</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/budget.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Jairo Flores SL</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Presupuesto</h2>
+        <form id="presupuestoForm">
+            <fieldset>
+                <legend>Datos de Contacto</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" maxlength="15" pattern="[A-Za-z]+" required><br>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" maxlength="40" pattern="[A-Za-z]+" required><br>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required><br>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Presupuesto</legend>
+               
+                <label for="producto">Producto</label>
+                <select id="producto">
+                    <option value="" data-precio="0">Seleccione un producto</option>
+                    <option value="producto1" data-precio="100">Producto 1 - $100</option>
+                    <option value="producto2" data-precio="200">Producto 2 - $200</option>
+                    <option value="producto3" data-precio="300">Producto 3 - $300</option>
+                </select>
+
+                <label>Extras</label>
+                <label><input type="checkbox" name="extras" data-precio="50"> Extra 1 - $50</label>
+                <label><input type="checkbox" name="extras" data-precio="75"> Extra 2 - $75</label>
+                <label><input type="checkbox" name="extras" data-precio="100"> Extra 3 - $100</label>
+
+                <label for="plazos">Número de Plazos</label>
+                <select id="plazos">
+                    <option value="1">1 plazo</option>
+                    <option value="2">2 plazos</option>
+                    <option value="3">3 plazos</option>
+                    <option value="4">4 plazos</option>
+                </select>
+                
+                <p>Total: $<span id="total">0.00</span></p>
+                <p>Total por Plazo: $<span id="plazoTotal">0.00"></span></p>
+            </fieldset>
+            
+            <label for="condiciones">Aceptar condiciones:</label>
+            <input type="checkbox" id="condiciones" name="condiciones" required><br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Resetear</button>
+        </form>
+    </main>
+    
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="../img/facebook.webp" alt="Facebook" width="30" height="30">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="../img/twiter.png" alt="Twitter" width="30" height="30">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="../img/Instagram.jpg" alt="Instagram" width="30" height="30">
+            </a>
+        </div>
+        <p>Dirección: Calle Falsa 123, Plaza España, Ciudad, País</p>
+        <p><a href="aviso-legal.html">Aviso Legal</a></p>
+        <p>&copy; 2024 JAIRO FLORES SL. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+

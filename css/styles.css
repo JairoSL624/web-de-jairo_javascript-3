@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: rgb(50, 208, 219);
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+}
+
+header h1 {
+    margin: 0;
+    color: #1c6581; /* Color corporativo azul cielo */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: rgb(50, 208, 219);
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    flex: 1; /* Permite que el contenido principal ocupe todo el espacio disponible */
+    max-width: 1200px; /* Limitar el ancho máximo para evitar que el contenido se extienda demasiado */
+    margin: 0 auto;
+    margin-top: 100px; /* Añadir margen superior para evitar superposición con la barra de navegación */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #1c6581; /* Color corporativo azul cielo */
+}
+
+.cluster {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.item {
+    text-align: center;
+    flex: 1 1 calc(25% - 1em);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    margin: 1em;
+}
+
+.producto_img, .servicios_img {
+    max-width: 100%; /* Ajuste al 100% del contenedor */
+    height: auto; /* Mantiene la proporción */
+    width: 200px; /* Ancho más pequeño de la imagen */
+    max-height: 250px; /* Altura mayor de la imagen */
+}
+
+footer {
+    background-color: #333;
+    color: rgb(50, 208, 219);
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto; /* Asegura que el pie de página se mantenga en la parte inferior */
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+footer .social-media a img {
+    width: 30px;
+    height: 30px;
+}
+
+/*MAPA*/
+
+#map {
+    width: 100%;
+    height: calc(100vh - 200px); /* Altura dinámica para evitar superposición con la barra de navegación */
+    margin: 0; /* Eliminar márgenes adicionales */
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1400px; /* Aumentar el ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor del mapa */
+}
+
+/* GALERIA */
+
+.gallery-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Estilo para destacar la opción activa del menú */
+nav ul li a.active {
+    background-color: #f0f0f0; /* Fondo claro */
+    color: #000; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+}
+
+
+
